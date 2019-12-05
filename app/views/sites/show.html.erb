@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @site.user_id %>
+</p>
+
+<p>
+  <strong>Domain:</strong>
+  <%= @site.domain %>
+</p>
+
+<%= link_to 'Edit', edit_site_path(@site) %> |
+<%= link_to 'Back', sites_path %>
+
+<pre>
+  &lt;div id="comments"&gt;&lt;/div&gt;
+  &lt;script src="<%= embed_url(format: :js) %>"&gt;&lt;/script&gt;
+  &lt;link rel="stylesheet" type="text/css" href="<%= embed_url(format: :css) %>"&gt;
+</pre>

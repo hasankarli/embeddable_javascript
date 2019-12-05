@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TestApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to "Test", root_path, class: "navbar-brand"  %>
+      </div>
+      <div class="navbar-header">
+        <%= link_to "Sites", sites_path, class: "navbar-brand"  %>
+      </div>
+      <div class="navbar-header">
+        <%= link_to "Disccussion", discussions_path, class: "navbar-brand"  %>
+      </div>
+      <div class="navbar-header navbar-right">
+        <% if user_signed_in? %>
+          <span><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "navbar-brand" %></span>
+        <% else %>
+          <span><%= link_to "Sign Up", new_user_registration_path, class: "navbar-brand" %></span>
+          <span><%= link_to "Log In", new_user_session_path, class: "navbar-brand" %></span>
+        <% end %>
+      </div> 
+    </div>
+  </nav>
+
+  <div class="container">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+    <div id="comments"></div>
+    <%= javascript_pack_tag "embed" %>
+  </div>
+  </body>
+</html>
