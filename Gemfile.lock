@@ -120,7 +120,7 @@ GEM
     orm_adapter (0.5.0)
     popper_js (1.14.5)
     public_suffix (4.0.1)
-    puma (4.3.0)
+    puma (4.3.5)
       nio4r (~> 2.0)
     puma-ngrok-tunnel (0.1.5)
       ngrok-tunnel (~> 2.1, >= 2.1.1)
@@ -234,7 +234,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
-  puma (~> 4.1)
+  puma (~> 4.3)
   puma-ngrok-tunnel
   rack-cors
   rails (~> 6.0.1)
